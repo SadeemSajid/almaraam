@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Borders: 2px */
+
+/* Generals */
+
+.page {
+	@apply min-h-screen bg-primary;
+}
+
+/* Navbar.svelte */
+
+.theme-btn {
+	@apply checkbox theme-controller rounded-full border-secondary border-2 w-8 h-8;
+}
