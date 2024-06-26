@@ -10,6 +10,33 @@
 	@apply min-h-screen bg-primary;
 }
 
+h1 {
+	@apply font-bitter text-[40px];
+}
+
+h2 {
+	@apply font-bitter text-[32px];
+}
+
+h3 {
+	@apply font-bitter text-[24px];
+}
+
+p {
+	@apply font-georgia text-[20px];
+}
+
+h1,
+h2,
+h3,
+p {
+	@apply text-secondary;
+}
+
+.ar {
+	@apply font-arabic;
+}
+
 /* Navbar.svelte */
 
 .theme-btn {
