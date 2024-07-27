@@ -30,8 +30,8 @@
 					<h1><a href="/explore">Explore By Tag.</a></h1>
 					<h1><a href="/about">About & Donate.</a></h1>
 				</div>
-				<!-- Art -->
-				<p class="font-arabic font-bold text-[5rem] lg:text-[12rem] mx-0 lg:mx-8">.المرام</p>
+				<!-- TODO: Responsive Art -->
+				<!-- <p class="font-arabic font-bold text-[5rem] lg:text-[12rem] mx-0 lg:mx-8">.المرام</p> -->
 			</div>
 		</div>
 	</div>

@@ -14,7 +14,7 @@
 	// OS Theme Preference
 	let darkMode = false;
 	onMount(() => {
-		// TODO: have system theme preference react to change as well (it does for me)
+		// TODO: Have system theme preference react to change as well (it does for me)
 		darkMode = window.matchMedia('prefers-color-scheme: dark').matches;
 	});
 
