@@ -15,15 +15,15 @@ h1 {
 }
 
 h2 {
-	@apply font-bitter text-[32px] mt-[32px];
+	@apply font-bitter text-[32px];
 }
 
 h3 {
-	@apply font-bitter text-[24px] mt-[32px];
+	@apply font-bitter text-[24px];
 }
 
 p {
-	@apply font-georgia text-[20px] mt-[24px];
+	@apply font-georgia text-[20px];
 }
 
 h1,
