@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
-	import { expoOut } from 'svelte/easing';
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
