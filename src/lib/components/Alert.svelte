@@ -20,7 +20,7 @@
 			? 'error'
 			: 'primary'} h-28 flex justify-between mt-40 border-0"
 	>
-		<p>{message}.</p>
+		<p>{message}</p>
 		<button class="btn m-0 p-0 border-0" on:click={() => closeAlert()}>
 			<CrossIcon class="text-secondary w-12 h-12" />
 		</button>

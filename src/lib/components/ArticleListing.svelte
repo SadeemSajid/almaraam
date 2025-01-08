@@ -7,6 +7,7 @@
 	export let title: string = '';
 	export let authorId: string = '';
 	export let date: string;
+	export let id: string;
 
 	let author = '';
 
@@ -31,6 +32,6 @@
 		<h3 class="text-accent">{formatDate(date)}.</h3>
 	</div>
 	<!-- TODO: Don't forget to update the hrefs -->
-	<h1 class="text-[48px] w-[80%]"><a href="/">{title}.</a></h1>
+	<h1 class="text-[48px] w-[80%]"><a href={`/article/${id}`}>{title}</a></h1>
 	<p>{cutExcerpt(excerpt, excerpt_limit)}</p>
 </div>
