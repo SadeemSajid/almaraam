@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* README */
 /* Borders: 2px */
+/* LG Page Margins: 80 */
 
 /* Generals */
 
@@ -11,7 +13,7 @@
 }
 
 h1 {
-	@apply font-bitter text-[40px];
+	@apply font-bitter text-[40px] font-bold;
 }
 
 h2 {
@@ -30,7 +32,8 @@ h1,
 h2,
 h3,
 p,
-a {
+a,
+li {
 	@apply text-secondary;
 }
 

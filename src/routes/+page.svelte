@@ -37,7 +37,7 @@
 {/if}
 
 <!-- Main Page Content -->
-<div class="mx-48 flex flex-col gap-8">
+<div class="xl:mx-80 mx-4 flex flex-col gap-8">
 	{#if articles}
 		{#each articles as article}
 			<ArticleListing

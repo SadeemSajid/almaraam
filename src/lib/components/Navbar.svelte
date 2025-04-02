@@ -21,7 +21,7 @@
 	// TODO: Theme persistence
 </script>
 
-<div class="flex justify-between px-4 lg:px-24 md:pt-16 pt-8 pb-24 w-full bg-primary">
+<div class="flex justify-between px-4 xl:px-80 md:pt-16 pt-8 pb-24 w-full bg-primary">
 	<div class="flex gap-4">
 		<button class="btn btn-circle btn-sm btn-secondary" on:click={toggleDrawer}></button>
 		<a href="/"><button class="btn btn-circle btn-sm btn-accent"></button></a>

@@ -1,4 +1,4 @@
-# Working Guide
+# Guide
 
 ## Developing
 
@@ -14,6 +14,15 @@ npm run dev
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
+
+## Dependencies
+
+We are using the following tech stack:
+
+1. SvelteKit
+2. TailwindCSS with DaisyUI
+3. MongoDB Atlas with Mongoose
+4. TS
 
 ## Git Guide
 

@@ -27,6 +27,7 @@
 					<h1><a href="/search" on:click={hideDrawer}>Search.</a></h1>
 					<h1><a href="/explore" on:click={hideDrawer}>Explore By Tag.</a></h1>
 					<h1><a href="/about" on:click={hideDrawer}>About & Donate.</a></h1>
+					<h1><a href="/about" on:click={hideDrawer}>Suggestions.</a></h1>
 				</div>
 				<!-- TODO: Responsive Art -->
 				<!-- <p class="font-arabic font-bold text-[5rem] lg:text-[12rem] mx-0 lg:mx-8">.المرام</p> -->
