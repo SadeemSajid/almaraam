@@ -41,6 +41,7 @@ Type checking:
 - **Theming**: DaisyUI handles theming via `theme` attribute and CSS variables
 - **Responsive**: DaisyUI components support responsive design patterns
 - **Layout**: Use DaisyUI layout utilities (flex, grid, spacing) alongside TailwindCSS
+- **Style**: Everything in this app is based on text and links, do not use icons and images
 
 ### TypeScript Configuration
 

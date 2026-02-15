@@ -20,7 +20,8 @@ h2 {
 	@apply font-bitter text-[32px];
 }
 
-h3 {
+h3,
+h4 {
 	@apply font-bitter text-[24px];
 }
 
