@@ -1,20 +1,20 @@
-export type ArticleModelType = {
-	_id: string;
+export type Article = {
+	id: string;
 	title: string;
 	content: string;
 	tags: string;
-	authorId: string;
+	author_id: string;
 	excerpt: string;
-	createdAt?: Date;
-	updatedAt?: Date;
+	created_at?: string;
+	updated_at?: string;
 };
 
-export type AuthorModelType = {
-	_id: string;
+export type Author = {
+	id: string;
 	name: string;
 	email: string;
 	contact: string;
 	description: string;
-	createdAt?: Date;
-	updatedAt?: Date;
+	created_at?: string;
+	updated_at?: string;
 };

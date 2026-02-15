@@ -18,7 +18,9 @@
 			// TODO: Replace this with a UI update
 			console.error('Error fetching author');
 		} else {
-			author = (await res.json()).data[0].name;
+			author = (await res.json()).data.name;
+
+			console.log(author);
 		}
 	});
 
@@ -26,12 +28,13 @@
 	export let excerpt: string = '';
 </script>
 
-<div class="flex flex-col gap-6">
-	<div class="flex gap-9">
-		<h3 class="text-accent">{author}.</h3>
-		<h3 class="text-accent">{formatDate(date)}.</h3>
+<div class="flex flex-col gap-4 md:gap-6">
+	<div class="flex gap-4 md:gap-6 lg:gap-9">
+		<h3 class="text-accent lg:text-2xl md:text-lg text-sm">{author}.</h3>
+		<h3 class="text-accent lg:text-2xl md:text-lg text-sm">{formatDate(date)}.</h3>
 	</div>
-	<!-- TODO: Don't forget to update the hrefs -->
-	<h1 class="text-[48px] w-[80%]"><a href={`/article/${id}`}>{title}</a></h1>
-	<p>{cutExcerpt(excerpt, excerpt_limit)}</p>
+	<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] w-[90%] sm:w-[85%] md:w-[80%]">
+		<a href={`/article/${id}`} class="leading-normal">{title}</a>
+	</h1>
+	<p class="text-sm sm:text-base md:text-lg">{cutExcerpt(excerpt, excerpt_limit)}</p>
 </div>

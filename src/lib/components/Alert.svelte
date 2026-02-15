@@ -1,14 +1,15 @@
 <script lang="ts">
 	import CrossIcon from '~icons/material-symbols-light/cancel-rounded';
 	import { createEventDispatcher } from 'svelte';
+
+	export let message = '';
+	export let error = false;
+
 	const dispatch = createEventDispatcher();
 
 	const closeAlert = () => {
 		dispatch('close');
 	};
-
-	export let message: string = '';
-	export let error: boolean = false;
 </script>
 
 <div
@@ -21,7 +22,7 @@
 			: 'primary'} h-28 flex justify-between mt-40 border-0"
 	>
 		<p>{message}</p>
-		<button class="btn m-0 p-0 border-0" on:click={() => closeAlert()}>
+		<button class="btn m-0 p-0 border-0" on:click={closeAlert}>
 			<CrossIcon class="text-secondary w-12 h-12" />
 		</button>
 	</div>

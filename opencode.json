@@ -1,0 +1,15 @@
+{
+	"$schema": "https://opencode.ai/config.json",
+	"permission": {
+		"*": "allow",
+		"bash": "ask"
+	},
+	"instructions": ["docs/arch.md"],
+	"mcp": {
+		"supabase": {
+			"type": "remote",
+			"url": "https://mcp.supabase.com/mcp?project_ref=lwzegmpyubycsfzlvihi&read_only=true",
+			"enabled": true
+		}
+	}
+}

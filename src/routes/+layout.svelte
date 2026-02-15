@@ -8,11 +8,9 @@
 
 	// Controls Nav Drawer
 	let hidden = true;
-	function toggleDrawer(event: CustomEvent<{ value: boolean }>) {
+	function toggleDrawer(event: CustomEvent) {
 		hidden = event.detail.value;
 	}
-
-	// TODO: Responsiveness
 </script>
 
 <div class="page">
