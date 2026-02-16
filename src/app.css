@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* README */
+/* Borders: 2px */
+/* LG Page Margins: 80 */
+
+/* Generals */
+
+.page {
+	@apply min-h-screen min-w-full bg-primary;
+}
+
+h1 {
+	@apply font-bitter text-[40px] font-medium;
+}
+
+h2 {
+	@apply font-bitter text-[32px];
+}
+
+h3,
+h4 {
+	@apply font-bitter text-[24px];
+}
+
+p {
+	@apply font-georgia text-[20px];
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+li {
+	@apply text-secondary;
+}
+
+a:hover,
+li:hover {
+	@apply text-accent;
+}
+
+.ar {
+	@apply font-arabic;
+}
+
+/* Navbar.svelte */
+
+.theme-btn {
+	@apply checkbox theme-controller rounded-full border-secondary border-2 w-8 h-8;
+}
+
+/* General Spacing */
+
+.content {
+	@apply px-4 lg:max-w-[calc(100vw-640px)] mx-auto flex w-full pb-20;
+}
