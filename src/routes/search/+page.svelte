@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils/formatDate';
+	import type { ArticleWithAuthor } from '$lib/types/types';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
@@ -7,14 +8,6 @@
 	let query = $page.url.searchParams.get('q') || '';
 	let loading = false;
 	let searched = false;
-
-	interface ArticleWithAuthor {
-		id: string;
-		title: string;
-		created_at: string;
-		author_id: string;
-		authorName?: string;
-	}
 
 	let articles: ArticleWithAuthor[] = [];
 
