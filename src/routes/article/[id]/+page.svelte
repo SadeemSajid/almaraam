@@ -64,6 +64,7 @@
 				content={article.content}
 				title={article.title}
 				author={author.name}
+				authorId={author.id}
 				date={new Date(article.created_at ?? new Date())}
 			/>
 			{#if tags.length > 0}

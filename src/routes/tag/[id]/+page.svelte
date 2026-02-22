@@ -41,18 +41,22 @@
 		<div class="skeleton h-24 bg-secondary/10"></div>
 		<div class="skeleton h-6 w-full bg-secondary/10"></div>
 	{:else}
-		<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px]">
+		<h1>
 			Tag: <span class="text-accent">{tag?.name ?? 'Unknown'}</span>
 		</h1>
 		{#if articles.length > 0}
 			{#each articles as article}
 				<div class="flex flex-col gap-4 md:gap-6">
-					<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] w-[90%] sm:w-[85%] md:w-[80%]">
-						<a href={`/article/${article.id}`} class="leading-normal">{article.title}</a>
+					<h1>
+						<a href={`/article/${article.id}`}>{article.title}</a>
 					</h1>
 					<div class="flex gap-4 md:gap-6 lg:gap-9">
-						<h3 class="text-accent lg:text-2xl md:text-lg text-sm">{article.authorName || ''}.</h3>
-						<h3 class="text-accent lg:text-2xl md:text-lg text-sm">
+						<h3>
+							<a href={`/author/${article.author_id}`} class="text-accent"
+								>{article.authorName || ''}.</a
+							>
+						</h3>
+						<h3 class="text-accent">
 							{formatDate(article.created_at?.toString() ?? '0000-00-00')}.
 						</h3>
 					</div>
@@ -68,7 +72,7 @@
 				<hr class="border border-secondary" /> -->
 			{/each}
 		{:else}
-			<p class="text-secondary">No articles found for this tag.</p>
+			<p>No articles found for this tag.</p>
 		{/if}
 	{/if}
 </div>
