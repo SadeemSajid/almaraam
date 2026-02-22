@@ -5,6 +5,7 @@
 	export let content = '';
 	export let title = '';
 	export let author = '';
+	export let authorId = '';
 	export let date: Date;
 
 	let html: string;
@@ -20,8 +21,8 @@
 
 <div class="flex flex-col w-full gap-6">
 	<div class="flex md:flex-row flex-col md:gap-20 gap-4 md:items-center">
-		<h3 class="text-accent font-normal">{author}</h3>
-		<h3 class="text-accent text-[20px] font-normal">{formatDate(date)}</h3>
+		<h3><a href={`/author/${authorId}`} class="text-accent hover:underline">{author}</a></h3>
+		<h3 class="text-accent">{formatDate(date)}</h3>
 	</div>
 	<h1>{title}</h1>
 	<div

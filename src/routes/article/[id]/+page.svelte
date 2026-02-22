@@ -1,12 +1,13 @@
 <script lang="ts">
 	import Markdown from '$lib/components/Markdown.svelte';
-	import type { Article, Author } from '$lib/types/types';
+	import type { Article, Author, Tag } from '$lib/types/types';
 	import { onMount } from 'svelte';
 
 	export let data;
 	let id = data.id;
 	let article: Article;
 	let author: Author;
+	let tags: Tag[] = [];
 	let loading = true;
 
 	// Load the article & author
@@ -30,6 +31,12 @@
 			} else {
 				author = (await res.json()).data;
 			}
+
+			// Fetch tags
+			res = await fetch(`/api/article/fetch/tags?article_id=${id}`);
+			if (res.ok) {
+				tags = (await res.json()).data || [];
+			}
 		}
 		loading = false;
 	});
@@ -52,11 +59,27 @@
 	</div>
 {:else if article && author}
 	<div class="px-4 lg:max-w-[calc(100vw-640px)] mx-auto flex w-full pb-20">
-		<Markdown
-			content={article.content}
-			title={article.title}
-			author={author.name}
-			date={new Date(article.created_at ?? new Date())}
-		/>
+		<div class="flex flex-col gap-6 w-full">
+			<Markdown
+				content={article.content}
+				title={article.title}
+				author={author.name}
+				authorId={author.id}
+				date={new Date(article.created_at ?? new Date())}
+			/>
+			{#if tags.length > 0}
+				<div class="flex gap-2 pt-4 border-t border-secondary/20">
+					<p class="text-secondary">Tags:</p>
+					<div class="flex flex-wrap gap-2">
+						{#each tags as tag}
+							<p>
+								<a href={`/tag/${tag.id}`} class="italic underline underline-offset-4">{tag.name}</a
+								>
+							</p>
+						{/each}
+					</div>
+				</div>
+			{/if}
+		</div>
 	</div>
 {/if}
