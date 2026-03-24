@@ -41,7 +41,7 @@
 					</h1>
 					<h1>
 						<a href="/about" on:click={hideDrawer} class="text-2xl sm:text-3xl md:text-5xl"
-							>About & Donate.</a
+							>About.</a
 						>
 					</h1>
 					<h1>
@@ -50,9 +50,7 @@
 						>
 					</h1>
 				</div>
-				<p class="font-arabic font-bold text-[4rem] text-[5rem] lg:text-[12rem] mx-0 lg:mx-8">
-					.المرام
-				</p>
+				<p class="font-arabic font-bold text-[5rem] lg:text-[12rem] mx-0 lg:mx-8">.المرام</p>
 			</div>
 		</div>
 	</div>
